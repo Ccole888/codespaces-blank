@@ -6,7 +6,7 @@
     .global clear_ram
 
 clear_ram:
-    lea ram(%rip), %rdi      
+    lea ram, %rdi      
     add $0x50, %rdi          
     mov $9, %rcx             
     mov $0x00, %al           
