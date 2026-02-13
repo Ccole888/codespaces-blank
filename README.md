@@ -1,6 +1,5 @@
-Compile Commands:
 ##Hello World:
-  # Compile
+  #Compile
   gcc -nostdlib -no-pie helloWorld.s -o hello
   ## Run
   ./hello
