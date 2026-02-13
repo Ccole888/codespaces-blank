@@ -6,7 +6,7 @@
     .global fill_Ram_Indirect
 
 fill_Ram_Indirect:
-    lea ram(%rip), %rdi      
+    lea ram, %rdi      
     add $0x50, %rdi          
     mov $9, %rcx             
     mov $0xFF, %al           

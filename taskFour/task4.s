@@ -1,20 +1,21 @@
-    .section .bss
-    .lcomm ram, 256          
+.section .bss
+    .lcomm ram, 256
     .global ram
 
-    .section .text
-    .global clear_ram
+.section .text
+    .global sum
 
-clear_ram:
-    lea ram(%rip), %rdi      
-    add $0x50, %rdi          
-    mov $1, %rcx             
-    mov $0x00, %al           
+sum:
+    mov $0b0, %eax          
+    mov $0b1, %ebx          
+    movb $10, %cl          
 
-loop_fill:
-    movb %al, (%rdi)         
-    inc %rdi
-    loop loop_fill
+L1:
+    add %ebx, %eax        
+    inc %ebx              
+    dec %cl               
+    jnz L1                 
+    mov %eax, ram+0x50
     ret
 
 .section .note.GNU-stack,"",@progbits
