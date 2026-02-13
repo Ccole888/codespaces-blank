@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+extern unsigned char ram[];
+extern void clear_ram(void);
+
+int main()
+{
+    clear_ram();
+    printf("RAM contents from 50h to 58H: \n");
+
+    for(int i = 0x50; i <= 0x58; i++)
+    {
+        printf("%02X ", ram[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
