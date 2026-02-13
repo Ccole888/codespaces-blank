@@ -1,7 +1,7 @@
-##Hello World:
-  #Compile
+## Hello World:
+  # Compile
   gcc -nostdlib -no-pie helloWorld.s -o hello
-  ## Run
+  # Run
   ./hello
 
 Task One:
